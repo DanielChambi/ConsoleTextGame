@@ -1,0 +1,53 @@
+<?xml version= "1.0"?>
+
+<gameText>
+    <message id="M000">
+        <text>
+            Hi mom!
+        </text>
+        <options>
+            <op id="Hi!" route="M001"></op>
+            <op id="Kisses" route="M002"></op>
+            <op id="Bye!" route="EXIT"></op>        
+        </options>
+    </message>
+
+    <message id="M001">
+        <text>
+            Nya
+        </text>
+        <options>
+            <op id="Restart" route="M000"></op>
+            <op id="Exit" route="EXIT"></op>
+        </options>
+    </message>
+    
+    <message id="M002">
+        <text>
+            Smoochus
+        </text>
+        <jump route="EXIT"></jump>
+    </message>
+
+    <message id="EXIT">
+        <text>
+            Bye-bye!
+        </text>
+    </message>
+
+</gameText>
+
+<!--
+    General message structure:
+
+    <message id="M000">
+        <text>
+        </text>
+        <options>
+            <op id="" route=""></op>
+            <op id="" route=""></op>
+            <op id="" route=""></op>     
+        </options>
+    </message>
+
+-->
