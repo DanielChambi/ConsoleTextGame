@@ -1,6 +1,9 @@
-<?xml version= "1.0"?>
+<?xml version=\"1.0\"?>
 
-<gameText>
+<root>
+    <text>
+        guau
+    </text>
     <message id="M000">
         <text>
             Hi mom!
@@ -14,7 +17,7 @@
 
     <message id="M001">
         <text>
-            Nya
+            Nya &lt;3
         </text>
         <options>
             <op id="Restart" route="M000"></op>
@@ -35,7 +38,7 @@
         </text>
     </message>
 
-</gameText>
+</root>
 
 <!--
     General message structure:
