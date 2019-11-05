@@ -36,26 +36,27 @@ int ModelXML::OpenFile(const char * fPath){
 
     return 0;
 }
-    /*
-    int ParseTestEntry(){
-        if(pRoot == nullptr) return XML_ERROR_FILE_NOT_FOUND;
 
-        XMLElement * pElement = pRoot->FirstChildElement("entry");
-        if(pElement == nullptr) return XML_ERROR_PARSING_ELEMENT;
+/*
+int ModelXML::ParseTestEntry(){
+    if(pRoot == nullptr) return XML_ERROR_FILE_NOT_FOUND;
 
-        const XMLAttribute * pAttribute = pElement->FindAttribute("id");
-        if(pAttribute == nullptr) return XML_ERROR_PARSING_ATTRIBUTE;
+    XMLElement * pElement = pRoot->FirstChildElement("entry");
+    if(pElement == nullptr) return XML_ERROR_PARSING_ELEMENT;
 
-        //Entry testEntry;
+    const XMLAttribute * pAttribute = pElement->FindAttribute("id");
+    if(pAttribute == nullptr) return XML_ERROR_PARSING_ATTRIBUTE;
 
-        const char * id = pAttribute->Value();
-        
-        
+    //Entry testEntry;
+
+    const char * id = pAttribute->Value();
+    
+    
 
 
-        return 0;                
-    }
-    */
+    return 0;                
+}
+*/
 
 
 
@@ -89,8 +90,4 @@ class Entry{
         EntryType type;
         int index;
         const char * plainText;
-        
-
-    
-
 };
