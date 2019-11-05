@@ -7,7 +7,9 @@
 using namespace std;
 
 int main(){
-    loadFile("../test.xml");
+    ModelXML model;
 
-    cout << getTestText();
+    model.OpenFile("./test.xml");
+    
+    cout << model.GetTestText();
 }

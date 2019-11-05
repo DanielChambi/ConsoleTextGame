@@ -4,46 +4,46 @@
     <text>
         guau
     </text>
-    <message id="M000">
+    <entry id="M0000">
         <text>
             Hi mom!
         </text>
         <options>
-            <op id="Hi!" route="M001"></op>
-            <op id="Kisses" route="M002"></op>
+            <op id="Hi!" route="M0001"></op>
+            <op id="Kisses" route="M0002"></op>
             <op id="Bye!" route="EXIT"></op>        
         </options>
-    </message>
+    </entry>
 
-    <message id="M001">
+    <entry id="M0001">
         <text>
             Nya &lt;3
         </text>
         <options>
-            <op id="Restart" route="M000"></op>
+            <op id="Restart" route="M0000"></op>
             <op id="Exit" route="EXIT"></op>
         </options>
-    </message>
+    </entry>
     
-    <message id="M002">
+    <entry id="M0002">
         <text>
             Smoochus
         </text>
         <jump route="EXIT"></jump>
-    </message>
+    </entry>
 
-    <message id="EXIT">
+    <entry id="EXIT">
         <text>
             Bye-bye!
         </text>
-    </message>
+    </entry>
 
 </root>
 
 <!--
-    General message structure:
+    General entry structure:
 
-    <message id="M000">
+    <entry id="M000">
         <text>
         </text>
         <options>
@@ -51,6 +51,6 @@
             <op id="" route=""></op>
             <op id="" route=""></op>     
         </options>
-    </message>
+    </entry>
 
 -->
