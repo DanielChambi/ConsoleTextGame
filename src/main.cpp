@@ -1,15 +1,17 @@
-#include "model.h"
-
-#include "tinyxml2.h"
+#include "modelXML.h"
+#include "view.h"
+#include "controller.h"
 
 #include <iostream>
 
-using namespace std;
 
 int main(){
-    ModelXML model;
+    ModelXML model("./test.xml");
+    View view;
 
-    model.OpenFile("./test.xml");
-    
-    cout << model.GetTestText();
+    Controller controller(model, view);
+
+    controller.Request(" ");
+
+    return 0;
 }

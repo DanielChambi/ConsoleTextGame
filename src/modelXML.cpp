@@ -1,4 +1,4 @@
-#include "model.h"
+#include "modelXML.h"
 
 #include "tinyxml2.h"
 
@@ -9,26 +9,26 @@
 	#define XMLCheckResult(a_eResult) if (a_eResult != XML_SUCCESS) { printf("Error: %i\n", a_eResult); return a_eResult; }
 #endif
 
-using namespace std;
 using namespace tinyxml2;
 
-ModelXML::ModelXML(){
+ModelXML::ModelXML(std::string fPath){
         xmlDoc = new XMLDocument(true, COLLAPSE_WHITESPACE);
+        this->OpenFile(fPath);
 }
 
-const char * ModelXML::GetTestText(){
+std::string ModelXML::GetTestText(){
     if(pRoot){
         XMLElement * pElement = pRoot->FirstChildElement("text");
         if(pElement == nullptr) return "";
-        const char* stringChar = pElement->GetText();
+        std::string stringChar = pElement->GetText();
         return stringChar;
     } else {
         return "Error";
     }
 }
 
-int ModelXML::OpenFile(const char * fPath){
-    XMLError eResult = xmlDoc->LoadFile(fPath);
+int ModelXML::OpenFile(std::string fPath){
+    XMLError eResult = xmlDoc->LoadFile(fPath.c_str());
     XMLCheckResult(eResult);
 
     pRoot = xmlDoc->RootElement();
@@ -49,7 +49,7 @@ int ModelXML::ParseTestEntry(){
 
     //Entry testEntry;
 
-    const char * id = pAttribute->Value();
+    string id = pAttribute->Value();
     
     
 
@@ -62,7 +62,7 @@ int ModelXML::ParseTestEntry(){
 
 
 /*
-EntryType ParseType(const char * id){
+EntryType ParseType(string id){
     if(id == "EXIT"){
         return EXIT;
     }else{
@@ -89,5 +89,5 @@ class Entry{
     public:
         EntryType type;
         int index;
-        const char * plainText;
+        std::string plainText;
 };
