@@ -6,7 +6,7 @@
 
 
 int main(){
-    ModelXML model("./test.xml");
+    ModelXML model("./assets/test.xml");
     View view;
 
     Controller controller(model, view);
