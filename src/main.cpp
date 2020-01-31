@@ -1,17 +1,19 @@
 #include "modelXML.h"
+#include "XMLParser.h"
 #include "view.h"
 #include "controller.h"
 
 #include <iostream>
 
+#include <fstream>
 
-int main(){
+int main(){    
     ModelXML model("./assets/test.xml");
+    XMLParser parser("./assets/test.xml");
     View view;
 
     Controller controller(model, view);
 
-    controller.Request(" ");
 
     return 0;
 }
