@@ -9,11 +9,10 @@
 
 int main(){    
     ModelXML model("./assets/test.xml");
-    XMLParser parser("./assets/test.xml");
+    XMLParser parser("./assets/test0.1.xml");
     View view;
 
     Controller controller(model, view);
-
 
     return 0;
 }

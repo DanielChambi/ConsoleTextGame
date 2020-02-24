@@ -14,12 +14,14 @@
  */
 class XMLNode{
 public:
-    std::string tagName;
-    std::string text;
+    std::string *tagName;
+    std::string *text;
     std::vector<XMLNode*> children;
 
     XMLNode();
+    XMLNode(std::string *name);
     
+    ~XMLNode();
     /**
      * Returns string represenatation of node and children.
      */
